@@ -133,5 +133,5 @@ SPECTACULAR_SETTINGS = {
 
 # Clients
 
-ACB_API_BASE_URL = os.environ.get("ACB_API_BASE_URL")
+ACB_API_BASE_URL = "https://api2.acb.com/api/v1"
 ACB_API_TOKEN = os.environ.get("ACB_API_TOKEN")

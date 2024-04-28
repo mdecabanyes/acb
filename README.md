@@ -7,19 +7,23 @@
 * Docker (& docker-compose)
 
 ## Setting it up
-1. Start up the server with docker-compose in your terminal from the root of the project (i.e. `acb/`):
+1. Create an `.env` file in the root of the project (i.e. `acb/.env`) and set up the `ACB_API_TOKEN` there:
+```
+ACB_API_TOKEN=H4sIAAAAAAAAA32Ry3aqMB...
+```
+2. Start up the server with docker-compose in your terminal from the root of the project:
 ```console
 sudo docker-compose up backend
 ```
-2. Open a new terminal and connect to the backend:
+3. Open a new terminal and connect to the backend:
 ```console
 sudo docker-compose exec backend bash
 ```
-3. From there, run the migrations:
+4. From there, run the migrations:
 ```console
 python manage.py migrate
 ```
-4. Finally, create a superuser (take into account that you will use this credentials to perform API calls):
+5. Finally, create a superuser (take into account that you will use this credentials to perform API calls):
 ```console
 python manage.py createsuperuser
 ```
