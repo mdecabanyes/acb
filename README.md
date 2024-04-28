@@ -59,7 +59,7 @@ The Admin panel is available http://localhost:8000/admin:
 
 ## And now?
 
-What follows is a series of suggestions that could be in order to improve the service:
+What follows is a series of suggestions in order to improve the service:
 * Cache the response of the endpoints (e.g. using Redis), so that database calls are reduced.
 * Paginate the response from the `pbp-lean` endpoint, since not all events may be required.
 * Model the database according to the domain, to improve its understandability (e.g. creating a model for players, another for action_types, etc.).
