@@ -43,6 +43,8 @@ class ACBClientTest(TestCase):
                 "game_id": 1,
                 "team_id": 2503,
                 "player_license_id": 30001114,
+                "player_points": 0,
+                "player_rebounds": 0,
                 "action_time": "00:10:00",
                 "action_type": 599,
                 "is_home_team": False,

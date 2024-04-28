@@ -22,10 +22,17 @@ class ACBClient:
         team_id = None
         if team := match_event.get("team", {}):
             team_id = team.get("id_team_denomination")
+        player_points = None
+        player_rebounds = None
+        if statistics := match_event.get("statistics", {}):
+            player_points = statistics.get("points")
+            player_rebounds = statistics.get("total_rebound")
         return MatchEvent(
             game_id=match_event.get("id_match"),
             team_id=team_id,
             player_license_id=match_event.get("id_license"),
+            player_points=player_points,
+            player_rebounds=player_rebounds,
             action_time=match_event.get("crono"),
             action_type=match_event.get("id_playbyplaytype"),
             is_home_team=match_event.get("local"),

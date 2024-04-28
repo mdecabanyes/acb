@@ -83,8 +83,8 @@ class GameAPIViewTest(APITestCase):
         self.assertIn("away_team_leaders", data)
         self.assertIn("points", data["home_team_leaders"])
         self.assertIn("rebounds", data["home_team_leaders"])
-        self.assertEqual(7, len(data["home_team_leaders"]["points"]))
-        self.assertEqual(4, len(data["home_team_leaders"]["rebounds"]))
+        self.assertEqual(10, len(data["home_team_leaders"]["points"]))
+        self.assertEqual(10, len(data["home_team_leaders"]["rebounds"]))
         self.assertDictEqual(
             {"player_license_id": 20212265, "total": 5},
             data["home_team_leaders"]["points"][0],
