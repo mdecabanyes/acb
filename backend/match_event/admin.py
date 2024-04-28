@@ -1,15 +1,6 @@
 from django.contrib import admin
 
-from .models import MatchEvent, MatchEventActionType
-
-
-@admin.register(MatchEventActionType)
-class MatchEventActionTypeAdmin(admin.ModelAdmin):
-    list_display = (
-        "id",
-        "normalized_description",
-    )
-    ordering = ("normalized_description",)
+from .models import MatchEvent
 
 
 @admin.register(MatchEvent)
@@ -19,7 +10,7 @@ class MatchEventAdmin(admin.ModelAdmin):
         "game_id",
         "team_id",
         "player_license_id",
-        "action_time",
         "action_type",
+        "score_home_team",
+        "score_away_team",
     )
-    ordering = ("action_time",)
